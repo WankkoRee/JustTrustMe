@@ -25,8 +25,8 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew assembleRelease
     - name: find apk
-      run: ls -al; ls -al app/build/outputs/apk; ls -al output/apk
+      run: ls -al app/build/outputs/apk/release
     - uses: actions/upload-artifact@v3
       with:
         name: app
-        path: app/build/outputs/apk/app-release-unsigned.apk
+        path: app/build/outputs/apk/release/app-release-unsigned.apk
