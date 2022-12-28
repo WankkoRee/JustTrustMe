@@ -24,6 +24,8 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew assembleRelease
+    - name: find apk
+      run: ls -al; ls -al app/build/outputs/apk; ls -al output/apk
     - uses: actions/upload-artifact@v3
       with:
         name: app
